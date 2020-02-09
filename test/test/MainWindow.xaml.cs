@@ -25,9 +25,21 @@ namespace test
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) // language select combobox
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //continue button
+        {
+            Window1 Main_page = new Window1();
+            this.Close();
+            Main_page.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) //close buttn
+        {
+            this.Close();
         }
     }
 }

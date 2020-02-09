@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("000668-free-football-logo-design-01.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("close_button.png")]
 
 
