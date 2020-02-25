@@ -34,6 +34,7 @@
             <ComboBoxItem Content="Español (ES)" />
             <ComboBoxItem Content="Deutsche (DE)" />
         </ComboBox>
+
         <Button
             Grid.Row="2"
             Width="101"
@@ -68,33 +69,16 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             RenderTransformOrigin="0.476,0.52">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FF565454" BlurRadius="2"/>
+            </Rectangle.Effect>
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Logo_langPage.png" />
             </Rectangle.Fill>
         </Rectangle>
-
-
-        <Button
-            Width="25"
-            Height="25"
-            Margin="969,0,-0.4,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#00FF9800"
-            Click="Button_Click_1"
-            Content=" "
-            RenderTransformOrigin="0.377,0.312" />
-        <Rectangle
-            Width="25"
-            Height="25"
-            Margin="969,0,-0.4,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Close_Button.png" />
-            </Rectangle.Fill>
-        </Rectangle>
-
+        <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" Margin="950,0,-0.4,0" Background="Black" BorderBrush="#00FF9800" Height="30" Click="Button_Click_2">
+            <materialDesign:PackIcon Foreground="#FFF7F1E8" Kind="Close" RenderTransformOrigin="0.263,0.35" />
+        </Button>
 
     </Grid>
 

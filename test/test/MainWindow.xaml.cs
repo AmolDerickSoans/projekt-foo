@@ -37,7 +37,9 @@ namespace test
             Main_page.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) //close buttn
+       
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

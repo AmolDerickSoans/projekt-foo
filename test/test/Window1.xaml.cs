@@ -24,6 +24,36 @@ namespace test
             InitializeComponent();
         }
 
-      
+        private void Button_Click_1(object sender, RoutedEventArgs e) //continue button
+        {
+
+
+        }
+
+       
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) //textbox for search
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)//search button
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //close this window i.e shutdown
+        {
+            if (MessageBox.Show("Do you want to close this window?",
+            "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // Do not close the window  
+            }
+           
+        }
+        
     }
 }
