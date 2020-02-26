@@ -54,6 +54,17 @@ namespace test
             }
            
         }
-        
+        private void Key_login(object sender , RoutedEventArgs e)
+        {
+            login login_window = new login();
+            login_window.Show();
+            this.Close();
+               
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
