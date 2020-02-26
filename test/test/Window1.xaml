@@ -45,7 +45,8 @@
                                 VerticalAlignment="Center"
                                 materialDesign:HintAssist.Hint="search"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                BorderThickness="0" TextChanged="TextBox_TextChanged" />
+                                BorderThickness="0"
+                                TextChanged="TextBox_TextChanged" />
                             <Button Grid.Column="2" Style="{DynamicResource MaterialDesignToolButton}">
                                 <materialDesign:PackIcon
                                     Margin="8,0,0,0"
@@ -58,7 +59,8 @@
                     <Button
                         Margin="8,0,0,0"
                         Panel.ZIndex="0"
-                        Style="{DynamicResource MaterialDesignToolForegroundButton}" Click="Button_Click_2">
+                        Click="Button_Click_2"
+                        Style="{DynamicResource MaterialDesignToolForegroundButton}">
                         <materialDesign:PackIcon x:Name="search" Kind="Send" />
                     </Button>
                 </StackPanel>
@@ -145,7 +147,10 @@
                 </StackPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
 
-            <Grid MinWidth="480" MinHeight="480" Margin="0,22,-0.4,0">
+            <Grid
+                MinWidth="480"
+                MinHeight="480"
+                Margin="0,22,-0.4,0">
                 <Grid
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -166,8 +171,9 @@
                         Margin="-446,-318,454,286"
                         materialDesign:ShadowAssist.ShadowDepth="Depth3"
                         BorderBrush="#00FF9800"
+                        Click="Button_Click_1"
                         Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
-                        CommandParameter="{x:Static Dock.Left}" Click="Button_Click_1">
+                        CommandParameter="{x:Static Dock.Left}">
                         <materialDesign:PackIcon Kind="Menu" RenderTransformOrigin="0.125,-2.387" />
                     </Button>
 
@@ -195,7 +201,8 @@
                 Margin="0,100,0,511"
                 Background="#00FF9800"
                 BorderBrush="#00FF9800"
-                Foreground="#00000000" Click="Button_Click">
+                Click="Button_Click"
+                Foreground="#00000000">
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="SoccerField" />
             </Button>
             <Button
@@ -220,8 +227,12 @@
             <Button
                 Margin="0,611,0,0"
                 Background="#00FF9800"
-                BorderBrush="#00FF9800" Click="Button_Click">
-                <materialDesign:PackIcon Foreground="#FFFF2E00" Kind="Shutdown" Background="#00D11717" />
+                BorderBrush="#00FF9800"
+                Click="Button_Click">
+                <materialDesign:PackIcon
+                    Background="#00D11717"
+                    Foreground="#FFFF2E00"
+                    Kind="Shutdown" />
             </Button>
 
         </Grid>
