@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace test
 {
     /// <summary>
@@ -30,7 +31,8 @@ namespace test
             main_window.Show();
             this.Close();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
 
         }

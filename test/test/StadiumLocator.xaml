@@ -1,0 +1,520 @@
+﻿<Window
+    x:Class="test.StadiumLocator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:test"
+    xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="StadiumLocator"
+    Width="1000"
+    Height="650"
+    Background="#FF2F2D2D"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="none"
+    mc:Ignorable="d">
+
+    <Grid Background="#0C000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="207.2" />
+            <ColumnDefinition />
+
+
+        </Grid.ColumnDefinitions>
+        <m:Map
+            x:Name="StadiumMap"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="3.8,0,-0.4,0.2"
+            Center="37.806029,-122.407007"
+            CredentialsProvider="DQi6MGkpkPYTFwwjY8a5~mQJMft8TwZNWVEAZCexF4A~AnfYDNrc_9RArsRuWLNa8jeAEoPnfuucqmXLHDVLM0GmzR6XMmgY0NMhca3rFOXV"
+            Mode="AerialWithLabels"
+            ZoomLevel="10">
+            <m:Pushpin Location="37.806029,-122.407007" />
+        </m:Map>
+        <StackPanel
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Width="790"
+            HorizontalAlignment="Left">
+            <Grid>
+                <Button
+                    Margin="935,5,-196.6,-5"
+                    VerticalAlignment="Top"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    Click="BackButton">
+                    <materialDesign:PackIcon Kind="KeyboardBackspace" />
+                </Button>
+            </Grid>
+        </StackPanel>
+        <ScrollViewer
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,5.2,0.2"
+            VerticalScrollBarVisibility="Auto">
+            <ListView>
+                <ListViewItem MouseDoubleClick="Anfield">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Anfield" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.7" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarHalf" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity: 54,074" />
+                            </StackPanel>
+                            
+                            <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="anfiled.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem MouseDoubleClick="Santiago">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Santiago Bernabéu" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.7" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarHalf" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity: 81,044" />
+                            </StackPanel>
+                            <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="santiago_bernabeu.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem Width="213" MouseDoubleClick="Allianz">
+                    <Border
+                        Width="184"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Text="Allianz Arena" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.6" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarHalf" />
+                                </StackPanel>
+                                <TextBlock Opacity="0.7" Text="Capacity: 75,024" />
+                            </StackPanel>
+                            <Image
+                                Width="50"
+                                Height="50"
+                                Margin="0,-3,5,3"
+                                HorizontalAlignment="Right"
+                                Source="allianz.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem MouseDoubleClick="Camp">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Camp Nou" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.6" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarHalf" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity: 99,354" />
+                            </StackPanel>
+                           <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="campnou.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem MouseDoubleClick="Etihad">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Etihad" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.5" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarHalf" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity:55,097" />
+                            </StackPanel>
+                            <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="etihad.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+
+                <ListViewItem MouseDoubleClick="Atatürk">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Atatürk Olympic" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.0" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarOutline" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity: 76,092" />
+                            </StackPanel>
+                            <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="ataturk.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+                <ListViewItem MouseDoubleClick="Red">
+                    <Border
+                        Width="179"
+                        BorderBrush="LightGray"
+                        BorderThickness="0,0,0,1">
+                        <Grid Height="50">
+                            <StackPanel Height="50">
+                                <TextBlock Margin="0,0,77,0" Text="Red Bull Arena" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="1"
+                                        FontSize="10"
+                                        Foreground="#DDFF6F0B"
+                                        Text="4.0" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="Star" />
+                                    <materialDesign:PackIcon
+                                        Width="12"
+                                        Height="12"
+                                        Margin="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="#DDFF6F0B"
+                                        Kind="StarOutline" />
+                                </StackPanel>
+                                <TextBlock
+                                    Margin="0,0,64,0"
+                                    Opacity="0.7"
+                                    Text="Capacity: 41,939" />
+                            </StackPanel>
+                            <Image
+                                Width="50"
+                                Height="50"
+                                HorizontalAlignment="Right"
+                                Source="rb_leipzig.jpg"
+                                Stretch="UniformToFill" />
+                        </Grid>
+                    </Border>
+                </ListViewItem>
+            </ListView>
+
+
+        </ScrollViewer>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,209 @@
+﻿<Window
+    x:Class="test.scoreboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:test"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="scoreboard"
+    Width="1000"
+    Height="650"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+    <Grid Background="#FF121212">
+        <materialDesign:ColorZone
+            Margin="48,0,-0.4,0"
+            Padding="9"
+            Mode="PrimaryMid">
+            <DockPanel Margin="0,0,39,0">
+                <StackPanel
+                    Width="826"
+                    materialDesign:RippleAssist.IsCentered="True"
+                    Orientation="Horizontal">
+
+                    <materialDesign:ColorZone
+                        Margin="16,0,0,0"
+                        Padding="8,4,8,4"
+                        Panel.ZIndex="1"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                        CornerRadius="2"
+                        Mode="Standard">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                            </Button>
+                            <TextBox
+                                Grid.Column="1"
+                                MinWidth="200"
+                                Margin="16,0,0,0"
+                                VerticalAlignment="Center"
+                                materialDesign:HintAssist.Hint="search"
+                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                BorderThickness="0" />
+                            <Button Grid.Column="2" Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon
+                                    Margin="8,0,0,0"
+                                    Kind="Microphone"
+                                    Opacity=".56" />
+                            </Button>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button
+                        Margin="8,0,0,0"
+                        Panel.ZIndex="0"
+                        Style="{DynamicResource MaterialDesignToolForegroundButton}">
+                        <materialDesign:PackIcon x:Name="search" Kind="Send" />
+                    </Button>
+
+
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <materialDesign:DrawerHost
+            Width="946"
+            Height="643"
+            Margin="-60,-98,-92.4,-101.8"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            materialDesign:ShadowAssist.ShadowDepth="Depth5"
+            BorderBrush="{DynamicResource MaterialDesignDivider}"
+            BorderThickness="0">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <StackPanel Margin="16">
+                    <TextBlock
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        Foreground="#FFFCBE64"
+                        Style="{StaticResource MaterialDesignHeadline5TextBlock}">
+                        MENU
+                    </TextBlock>
+
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        CommandParameter="{x:Static Dock.Left}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Foreground="#FFFCBE64"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        Live Games
+                    </Button>
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        CommandParameter="{x:Static Dock.Left}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Foreground="#FFFCBE64"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        Score Board
+                    </Button>
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        CommandParameter="{x:Static Dock.Left}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Foreground="#FFFCBE64"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        Dream Team
+                    </Button>
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        CommandParameter="{x:Static Dock.Left}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Foreground="#FFFCBE64"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        Locate Stadium
+                    </Button>
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                        CommandParameter="{x:Static Dock.Left}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        CLOSE THIS
+                    </Button>
+                    <Button
+                        Margin="4"
+                        HorizontalAlignment="Center"
+                        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                        FontFamily="roboto"
+                        FontWeight="Normal"
+                        Style="{DynamicResource MaterialDesignFlatButton}">
+                        CLOSE ALL
+                    </Button>
+                </StackPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+
+
+        </materialDesign:DrawerHost>
+
+        <Grid
+            Width="48"
+            Margin="0,0,0,0.2"
+            HorizontalAlignment="Left"
+            Background="#FF363636">
+
+            <Button
+                Margin="0,63,0,548"
+                Background="#00000000"
+                BorderBrush="#00000000"
+                Foreground="White">
+
+                <materialDesign:PackIcon Foreground="#FFFF9800" Kind="Soccer" />
+            </Button>
+            <Button
+                Margin="0,100,0,511"
+                Background="#00FF9800"
+                BorderBrush="#00FF9800"
+                Foreground="#00000000">
+                <materialDesign:PackIcon Foreground="#FFFF9800" Kind="SoccerField" />
+            </Button>
+            <Button
+                Margin="0,560,0,51.2"
+                Background="#00FF9800"
+                BorderBrush="#00FF9800">
+                <materialDesign:PackIcon Foreground="#FFFF9800" Kind="Language" />
+            </Button>
+            <Button
+                Margin="0,143,0,468"
+                Background="#00FF9800"
+                BorderBrush="#00FF9800">
+
+                <materialDesign:PackIcon Foreground="#FFFF9800" Kind="GamepadVariantOutline" />
+            </Button>
+            <Button
+                Margin="0,180,0,431"
+                Background="#00FF9800"
+                BorderBrush="#00FF9800">
+                <materialDesign:PackIcon Foreground="#FFFF9800" Kind="MapMarkerRadius" />
+            </Button>
+            <Button
+                Margin="0,601,0,10"
+                Background="#00FF9800"
+                BorderBrush="#00FF9800">
+                <materialDesign:PackIcon
+                    Background="#00D11717"
+                    Foreground="#FFFF2E00"
+                    Kind="Shutdown" />
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>

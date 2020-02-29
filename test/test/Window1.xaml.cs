@@ -61,10 +61,38 @@ namespace test
             this.Close();
                
         }
+        private void Score_Board_Click(object sender , RoutedEventArgs e)
+        {
+           
 
+            scoreboard ScoreBoard = new scoreboard();
+            this.Close();
+            ScoreBoard.Show();
+           
+        }
+
+        private void Score_Icon_Click(object sender, RoutedEventArgs e)
+        {
+            scoreboard ScoreBoard = new scoreboard();
+            ScoreBoard.Show();
+            this.Close();
+
+        }
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Map_button(object sender , RoutedEventArgs e) //map button text clickable
+        {
+            StadiumLocator std_loc = new StadiumLocator();
+            std_loc.Show();
+            this.Close();
+        }
+        private void Map_icon(object sender, RoutedEventArgs e) //map icon is also clickable
+        {
+            StadiumLocator std_loc = new StadiumLocator();
+            std_loc.Show();
+            this.Close();
         }
     }
 }

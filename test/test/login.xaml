@@ -6,12 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:test"
         mc:Ignorable="d"
-       
+       WindowStartupLocation="CenterScreen"
           Title="Login"
     Width="800"
     Height="450"
     AllowsTransparency="True"
-    Background="White"
+    Background="Black"
     FontFamily="{materialDesign:MaterialDesignFont}"
     TextElement.FontSize="14"
     TextElement.FontWeight="Medium"
@@ -30,7 +30,7 @@
         </Grid.RowDefinitions>
         <Rectangle Margin="0,0,0,-0.4" Grid.RowSpan="3" Grid.ColumnSpan="2" Fill="#FF2F2D2D" />
         <Label Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,8.867,0,0" FontSize="18" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <Button Grid.ColumnSpan="2" Content="Login" HorizontalAlignment="Left" Margin="178,293.2,0,103.6" Grid.Row="2" VerticalAlignment="Center" Width="75" Click="Button_Click">
+        <Button Grid.ColumnSpan="2" Content="Login" HorizontalAlignment="Left" Margin="178,293.2,0,103.6" Grid.Row="2" VerticalAlignment="Center" Width="75" Click="Login_Click">
 
         </Button>
         <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,97.2,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238"/>

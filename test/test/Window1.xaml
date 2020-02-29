@@ -7,8 +7,13 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Window1"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Light"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     Width="1000"
     Height="650"
+    ResizeMode="NoResize"
     WindowStyle="None"
     mc:Ignorable="d">
     <Grid Background="#FF121212">
@@ -99,6 +104,7 @@
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
+                        Click="Score_Board_Click"
                         CommandParameter="{x:Static Dock.Left}"
                         FontFamily="roboto"
                         FontWeight="Normal"
@@ -119,6 +125,7 @@
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
+                        Click="Map_button"
                         CommandParameter="{x:Static Dock.Left}"
                         FontFamily="roboto"
                         FontWeight="Normal"
@@ -165,8 +172,8 @@
                     </Grid.ColumnDefinitions>
                     <Button
                         Grid.Column="0"
-                        Margin="-446,-291,454,291"
-                        materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                        Margin="-448,-295,456,295"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth4"
                         BorderBrush="#00FF9800"
                         Click="Button_Click_1"
                         Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
@@ -211,7 +218,7 @@
                 Margin="0,100,0,511"
                 Background="#00FF9800"
                 BorderBrush="#00FF9800"
-                Click="Button_Click"
+                Click="Score_Icon_Click"
                 Foreground="#00000000">
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="SoccerField" />
             </Button>
@@ -231,7 +238,8 @@
             <Button
                 Margin="0,180,0,431"
                 Background="#00FF9800"
-                BorderBrush="#00FF9800">
+                BorderBrush="#00FF9800"
+                Click="Map_icon">
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="MapMarkerRadius" />
             </Button>
             <Button
