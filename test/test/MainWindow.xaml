@@ -23,7 +23,7 @@
             <RowDefinition Height="271*" />
             <RowDefinition Height="325*" />
         </Grid.RowDefinitions>
-        <ComboBox
+        <ComboBox x:Name="langSel"
             Grid.Row="2"
             Width="120"
             Margin="460,65.6,0,0"
