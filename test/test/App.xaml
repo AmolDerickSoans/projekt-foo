@@ -1,15 +1,36 @@
 ﻿<Application x:Class="test.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+              xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+             
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+ 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:test"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="Orange" SecondaryColor="Lime" />
+                <!-- This is the current way to setup your app's initial theme -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Orange.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+                <!-- However, however you can make it simpler by just using one of the built-in themes. This is functionally identical to what is above.-->
+                <!--<materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />-->
+
+                <!-- If you would prefer to use your own colors there is an option for that as well -->
+                <!--<materialDesign:CustomColorTheme BaseTheme="Light" PrimaryColor="Aqua" SecondaryColor="DarkGreen" />-->
+
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
+
+
+ 
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 namespace test
 {
@@ -24,12 +24,16 @@ namespace test
         Dictionary<string, string> cred = new Dictionary<string, string>();
         public login()
         {
+            //Label usernameLabel = new Label();
 
+            //usernameLabel.Content = "dfafs";
+            // usernameLabel.Content = (MainWindow.langKey == 0) ? "Login" : (MainWindow.langKey == 1) ? "Login" : "Sesion";
 
-            usernameLabel.Content = (MainWindow.langKey == 0) ? "Login" : (MainWindow.langKey == 1) ? "Login" : "Session";
-
-        
-
+            try
+            {
+                loginButton.Content = (MainWindow.langKey == 0) ? "Login" : (MainWindow.langKey == 1) ? "verifica" : "Sesion";
+            }
+            catch(Exception e) { }
             cred.Add("admin", "admin");
             cred.Add("aaditya", "0622");
             cred.Add("Akshay", "piazza");

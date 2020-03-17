@@ -178,7 +178,7 @@
             <Button
                 Margin="0,560,0,51.2"
                 Background="#00FF9800"
-                BorderBrush="#00FF9800">
+                BorderBrush="#00FF9800" Click="Button_Click">
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="Language" />
             </Button>
             <Button
@@ -197,7 +197,7 @@
             <Button
                 Margin="0,601,0,10"
                 Background="#00FF9800"
-                BorderBrush="#00FF9800">
+                BorderBrush="#00FF9800" Click="Button_Click_1">
                 <materialDesign:PackIcon
                     Background="#00D11717"
                     Foreground="#FFFF2E00"

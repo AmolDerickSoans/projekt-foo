@@ -20,8 +20,9 @@ namespace test
     public partial class Window1 : Window
     {
         public Window1()
-        {
+        {   
             InitializeComponent();
+                        
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) //continue button
@@ -93,6 +94,18 @@ namespace test
             StadiumLocator std_loc = new StadiumLocator();
             std_loc.Show();
             this.Close();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)//language
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Close();
+        }
+
+        private void PopupBox_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+
         }
     }
 }

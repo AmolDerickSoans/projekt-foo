@@ -3,18 +3,20 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com" 
     xmlns:local="clr-namespace:test"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Window1"
+    Width="1000"
+    Height="650"
     FontFamily="{materialDesign:MaterialDesignFont}"
+    ResizeMode="NoResize"
     TextElement.FontSize="14"
     TextElement.FontWeight="Light"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    Width="1000"
-    Height="650"
-    ResizeMode="NoResize"
     WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid Background="#FF121212">
         <materialDesign:ColorZone
@@ -44,12 +46,14 @@
                                 <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
                             </Button>
                             <TextBox
+                                x:Name="searchBox"
                                 Grid.Column="1"
                                 MinWidth="200"
                                 Margin="16,0,0,0"
                                 VerticalAlignment="Center"
                                 materialDesign:HintAssist.Hint="search"
                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                AutomationProperties.HelpText="ejychjcef"
                                 BorderThickness="0"
                                 TextChanged="TextBox_TextChanged" />
                             <Button Grid.Column="2" Style="{DynamicResource MaterialDesignToolButton}">
@@ -73,8 +77,8 @@
             </DockPanel>
         </materialDesign:ColorZone>
         <materialDesign:DrawerHost
-            Width="946"
-            Height="643"
+            Width="950"
+            Height="647"
             Margin="48,0,-0.4,0.2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -82,76 +86,72 @@
             BorderBrush="{DynamicResource MaterialDesignDivider}"
             BorderThickness="0">
             <materialDesign:DrawerHost.LeftDrawerContent>
-                <StackPanel Margin="16">
+                <StackPanel Margin="0,16,0,16.2" Width="118">
                     <TextBlock
-                        Margin="4"
+                        Margin="2"
                         HorizontalAlignment="Center"
                         Foreground="#FFFCBE64"
-                        Style="{StaticResource MaterialDesignHeadline5TextBlock}">
-                        MENU
-                    </TextBlock>
+                        Style="{StaticResource MaterialDesignHeadline5TextBlock}"><Run Text="MENU" /></TextBlock>
 
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
                         CommandParameter="{x:Static Dock.Left}"
+                        Content="Live Games"
                         FontFamily="roboto"
                         FontWeight="Normal"
+                        FontSize="13"
                         Foreground="#FFFCBE64"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        Live Games
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
                         Click="Score_Board_Click"
                         CommandParameter="{x:Static Dock.Left}"
+                        Content="Score Board"
                         FontFamily="roboto"
+                         FontSize="13"
                         FontWeight="Normal"
                         Foreground="#FFFCBE64"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        Score Board
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
                         CommandParameter="{x:Static Dock.Left}"
+                        Content="Dream Team"
+                         FontSize="13"
                         FontFamily="roboto"
                         FontWeight="Normal"
                         Foreground="#FFFCBE64"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        Dream Team
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                     <Button
-                        Margin="4"
+                        Margin="2"
                         HorizontalAlignment="Center"
+                         FontSize="13"
                         Click="Map_button"
                         CommandParameter="{x:Static Dock.Left}"
+                        Content="Locate Stadium"
                         FontFamily="roboto"
                         FontWeight="Normal"
                         Foreground="#FFFCBE64"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        Locate Stadium
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
                         Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
                         CommandParameter="{x:Static Dock.Left}"
+                        Content="CLOSE THIS"
                         FontFamily="roboto"
                         FontWeight="Normal"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        CLOSE THIS
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                     <Button
                         Margin="4"
                         HorizontalAlignment="Center"
                         Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                        Content="CLOSE ALL"
                         FontFamily="roboto"
                         FontWeight="Normal"
-                        Style="{DynamicResource MaterialDesignFlatButton}">
-                        CLOSE ALL
-                    </Button>
+                        Style="{DynamicResource MaterialDesignFlatButton}" />
                 </StackPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
 
@@ -186,6 +186,7 @@
 
 
                 </Grid>
+
                 <Button
                     Width="49"
                     Margin="887,10,0,0"
@@ -199,6 +200,264 @@
 
             </Grid>
         </materialDesign:DrawerHost>
+
+        <ScrollViewer Margin="143,362,0,-1.4">
+            <StackPanel Width="792">
+                <GroupBox
+  Header="FootBall News"
+  Style="{DynamicResource MaterialDesignGroupBox}"
+  Margin="5,16,-102,16"
+  materialDesign:ShadowAssist.ShadowDepth="Depth4"
+  BorderThickness="0" Height="285" />
+                <GroupBox
+  Header="Player Of The Day"
+  Style="{DynamicResource MaterialDesignGroupBox}"
+  Margin="16"
+  materialDesign:ShadowAssist.ShadowDepth="Depth4"
+  BorderThickness="0" Height="542">
+                    <Image Width="889" Source="Ozil-stats.png" Margin="0,30,0,-10.6"/>
+
+                </GroupBox>
+
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Margin="48,56,2,0.6">
+            <Grid Margin="158,44,381,334">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="76*"/>
+                    <RowDefinition Height="139*"/>
+                </Grid.RowDefinitions>
+                <Image gif:ImageBehavior.RepeatBehavior="20x" HorizontalAlignment="Left"
+       gif:ImageBehavior.AnimatedSource="dashboard.gif" Margin="-22,-36,-137.6,-38.8" Width="571" Grid.RowSpan="2"/>
+
+
+
+
+
+
+            </Grid>
+            <Grid Margin="613,4,-2,279">
+                <ScrollViewer Margin="27,7,-0.6,-7.2" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
+                    <StackPanel Orientation="Horizontal" Margin="0" Height="277" Width="215" >
+
+                        <materialDesign:Card HorizontalAlignment="Left"   Width="215" Margin="0,15,51.4,-1.2" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Background="#FFD00C0C">
+                            <materialDesign:Card.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.041"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </materialDesign:Card.RenderTransform>
+                            <Grid Margin="0,-6,0.4,-4">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                      Height="140" />
+                                    <RowDefinition />
+                                    <RowDefinition
+                          Height="Auto" MinHeight="35.2" />
+                                </Grid.RowDefinitions>
+                                <Image
+                         Stretch="UniformToFill" Source="placeholderInfographic.jpg" Margin="2,5,3.2,0" RenderTransformOrigin="0.5,0.5" >
+                                    <Image.OpacityMask>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="Black" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Image.OpacityMask>
+                                    <Image.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-0.406"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Image.RenderTransform>
+                                </Image>
+                                <Button
+                          Grid.Row="0"
+                         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                     HorizontalAlignment="Right"
+                      VerticalAlignment="Bottom"
+                          Margin="0,0,15.2,70.4" Grid.RowSpan="2">
+                                    <materialDesign:PackIcon
+                     Kind="FootballAustralian" />
+                                </Button>
+                                <StackPanel
+                  Grid.Row="1"
+                  Margin="8,24,7.2,0.4">
+                                    <TextBlock
+                          FontWeight="Bold"><Run Text="Germany"/></TextBlock>
+                                    <TextBlock
+                         TextWrapping="Wrap"
+                        VerticalAlignment="Center"><Run Text="A great way to keep fit and forget about the constant grind of IT."/></TextBlock>
+                                </StackPanel>
+                                <StackPanel
+      HorizontalAlignment="Right"
+      Grid.Row="2"
+      Orientation="Horizontal"
+      Margin="0,7.6,7.2,8.4" Width="95">
+                                    <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                        <materialDesign:PackIcon
+          Kind="ShareVariant" />
+                                    </Button>
+                                    <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                        <materialDesign:PackIcon
+          Kind="Heart" />
+                                    </Button>
+                                    <materialDesign:PopupBox
+        Style="{StaticResource MaterialDesignToolPopupBox}"
+        Padding="2 0 2 0">
+                                        <StackPanel>
+                                            <Button
+            Content="More" />
+                                            <Button
+            Content="Options" />
+                                        </StackPanel>
+                                    </materialDesign:PopupBox>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Card>
+
+                        <materialDesign:Card HorizontalAlignment="Center"   Width="194" Margin="0,20,51.4,20.8" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Background="#FFD00C0C">
+                            <materialDesign:Card.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.041"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </materialDesign:Card.RenderTransform>
+                            <Grid Margin="0,-6,0.4,-4">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                      Height="140" />
+                                    <RowDefinition />
+                                    <RowDefinition
+                          Height="Auto" MinHeight="35.2" />
+                                </Grid.RowDefinitions>
+                                <Image
+                         Stretch="UniformToFill" Source="placeholderInfographic.jpg" Margin="2,0,0.2,0" RenderTransformOrigin="0.5,0.5" >
+                                    <Image.OpacityMask>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="Black" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Image.OpacityMask>
+                                    <Image.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-0.406"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Image.RenderTransform>
+                                </Image>
+                                <Button
+                          Grid.Row="0"
+                         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                     HorizontalAlignment="Right"
+                      VerticalAlignment="Bottom"
+                          Margin="0,0,15.2,70.4" Grid.RowSpan="2">
+                                    <materialDesign:PackIcon
+                     Kind="FootballAustralian" />
+                                </Button>
+                                <StackPanel
+                  Grid.Row="1"
+                  Margin="8,24,7.2,0.4">
+                                    <TextBlock
+                          FontWeight="Bold"><Run Text="Germany"/></TextBlock>
+                                    <TextBlock
+                         TextWrapping="Wrap"
+                        VerticalAlignment="Center"><Run Text="A great way to keep fit and forget about the constant grind of IT."/></TextBlock>
+                                </StackPanel>
+                                <StackPanel
+      HorizontalAlignment="Right"
+      Grid.Row="2"
+      Orientation="Horizontal"
+      Margin="0,7.6,7.2,8.4" Width="95">
+                                    <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                        <materialDesign:PackIcon
+          Kind="ShareVariant" />
+                                    </Button>
+                                    <Button
+        Style="{StaticResource MaterialDesignToolButton}"
+        Width="30"
+        Padding="2 0 2 0"
+        materialDesign:RippleAssist.IsCentered="True">
+                                        <materialDesign:PackIcon
+          Kind="Heart" />
+                                    </Button>
+                                    <materialDesign:PopupBox
+        Style="{StaticResource MaterialDesignToolPopupBox}"
+        Padding="2 0 2 0">
+                                        <StackPanel>
+                                            <Button
+            Content="More" />
+                                            <Button
+            Content="Options" />
+                                        </StackPanel>
+                                    </materialDesign:PopupBox>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Card>
+
+
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <materialDesign:PopupBox 
+                                 HorizontalAlignment="Right" VerticalAlignment="Top"
+                                 Margin="0,3,0,0">
+                <StackPanel>
+                    <Button ToolTip="GitHub Projket Foo">
+                        <materialDesign:PackIcon Kind="GithubFace" Height="20" Width="20" />
+                    </Button>
+                    <Button ToolTip="Twitter"
+                        Background="{DynamicResource PrimaryHueMidBrush}"
+                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}">
+                        <materialDesign:PackIcon Kind="Twitter" />
+                    </Button>
+                    <Button ToolTip="Chat" >
+                        <!-- mix up the colours by bringing in a named palette (see merged dictionaries at top) -->
+
+
+                        <materialDesign:PackIcon Kind="Message" />
+                    </Button>
+                    <Button ToolTip="Email"
+                        Background="{DynamicResource SecondaryAccentBrush}"
+                        Foreground="{DynamicResource SecondaryAccentForegroundBrush}"
+                        >
+                        <materialDesign:PackIcon Kind="Email" />
+                    </Button>
+                    <Button ToolTip="Feel like you want to make a donation? ." 
+                       >
+
+
+                        <materialDesign:PackIcon Kind="Gift" />
+                    </Button>
+                </StackPanel>
+
+            </materialDesign:PopupBox>
+            <Image HorizontalAlignment="Left" Height="22" Margin="470,276,0,0" VerticalAlignment="Top" Width="6"/>
+        </Grid>
+
+
 
         <Grid
             Width="48"
@@ -223,9 +482,9 @@
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="SoccerField" />
             </Button>
             <Button
-                Margin="0,560,0,51.2"
+                Margin="0,563,0,54.4"
                 Background="#00FF9800"
-                BorderBrush="#00FF9800">
+                BorderBrush="#00FF9800" HorizontalAlignment="Right" Width="48" Click="Button_Click_4">
                 <materialDesign:PackIcon Foreground="#FFFF9800" Kind="Language" />
             </Button>
             <Button

@@ -102,3 +102,6 @@ C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\bin\Debug\Microsoft.Map
 C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
 C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\obj\Debug\StadiumLocator.g.cs
 C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\obj\Debug\StadiumLocator.baml
+C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\obj\Debug\test_Content.g.cs
+C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\bin\Debug\WpfAnimatedGif.dll
+C:\Users\Amol\Documents\projektfoo\projekt-foo\test\test\bin\Debug\WpfAnimatedGif.xml

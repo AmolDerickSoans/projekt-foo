@@ -24,6 +24,25 @@ namespace test
             InitializeComponent();
         }
 
-     
+        private void Button_Click(object sender, RoutedEventArgs e) //language
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)//shutdown
+        {
+            if (MessageBox.Show("Do you want to close this window?",
+          "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // Do not close the window  
+            }
+
+        }
     }
 }

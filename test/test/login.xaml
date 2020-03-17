@@ -33,7 +33,8 @@
             Grid.ColumnSpan="2"
             Margin="0,0,0,-0.4"
             Fill="#FF2F2D2D" />
-        <Label x:Name="loginLabel"
+        <Label
+            x:Name="loginLabel"
             Grid.Row="1"
             Grid.RowSpan="2"
             Grid.ColumnSpan="2"
@@ -44,6 +45,7 @@
             FontSize="18"
             FontWeight="Bold" />
         <Button
+            x:Name="loginButton"
             Grid.Row="2"
             Grid.ColumnSpan="2"
             Width="75"
@@ -52,10 +54,9 @@
             VerticalAlignment="Center"
             Click="Login_Click"
             Content="Login" />
-        <materialDesign:Snackbar
-  MessageQueue="{materialDesign:MessageQueue}"
-  x:Name="SnackbarThree" />
-        <TextBox x:Name="username"
+        <materialDesign:Snackbar x:Name="SnackbarThree" MessageQueue="{materialDesign:MessageQueue}" />
+        <TextBox
+            x:Name="username"
             Grid.Row="2"
             Grid.ColumnSpan="2"
             Width="210"
@@ -66,16 +67,18 @@
             Text=""
             TextChanged="TextBox_TextChanged"
             TextWrapping="Wrap" />
-        <Label x:Name="usernameLabel"
+        <Label
+            x:Name="usernameLabel"
             Grid.Row="2"
             Grid.ColumnSpan="2"
-            Width="55"
+            Width="64"
             Height="26"
             Margin="10,103.2,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Content="Username"
             FontSize="12"
-            FontWeight="Normal" Content="Username" />
+            FontWeight="Normal" />
         <TextBlock
             Grid.Row="2"
             Grid.ColumnSpan="2"
@@ -90,7 +93,8 @@
             Text="* can only be accessed by the admins of this software"
             TextAlignment="Center"
             TextWrapping="Wrap" />
-        <Label x:Name="passwordLabel"
+        <Label
+            x:Name="passwordLabel"
             Grid.Row="2"
             Grid.ColumnSpan="2"
             Width="66"
@@ -124,7 +128,15 @@
             Click="BackToMain">
             <materialDesign:PackIcon Kind="KeyboardBackspace" />
         </Button>
-        <PasswordBox x:Name="password"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="211" Margin="94,144.2,0,0" Grid.Row="2"/>
-       
+        <PasswordBox
+            x:Name="password"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Width="211"
+            Height="35"
+            Margin="94,144.2,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+
     </Grid>
 </Window>
