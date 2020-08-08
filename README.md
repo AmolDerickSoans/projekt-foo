@@ -15,7 +15,7 @@ uses material design toolkit  and is more of a proof of concept that wpf can be 
 >homescreen
 ![alt text](https://github.com/AmolDerickSoans/projekt-foo/blob/master/Resources/3ygAUb7Ji9.png?raw=true)
 >bing maps for stadium location
-![alt text](https://github.com/AmolDerickSoans/projekt-foo/blob/master/Resources/trNHXS5yUp.png?raw=true)
+![alt text](https://github.com/AmolDerickSoans/projekt-foo/blob/master/Resources/trNHXS5yUp.jpg)
 
 
 ## Contributing
