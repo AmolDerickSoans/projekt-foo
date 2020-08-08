@@ -27,7 +27,7 @@ uses material design toolkit  and is more of a proof of concept that wpf can be 
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+    - 👯 Clone this repo to your local machine using `https://github.com/AmolDerickSoans/projekt-foo.git`
 
 ### Step 2
 
