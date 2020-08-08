@@ -6,7 +6,7 @@ uses material design toolkit  and is more of a proof of concept that wpf can be 
 - xaml
 - wpf forms
 - <a href="https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit" target="_blank">**MaterialDesignInXAML**</a> 
--mysql
+- mysql
 ## Screen-shots
 >welcome screen
 ![alt text](https://github.com/AmolDerickSoans/projekt-foo/blob/master/Resources/unqQy5lWKs.png?raw=true)
